@@ -1,0 +1,775 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #4b379a;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    line-height: 1.5em;
+    color: #777777;
+}
+
+.grid-container{
+    grid-template-columns: 1fr;
+    width: 80%;
+    margin: 5rem auto;
+    grid-template-areas:
+    "header"
+    "seccion1"
+    "seccion2"
+    "seccion3"
+    "formulario"
+    "subscribe"
+    "footer"
+    "seccion9"
+}
+
+.flex-column{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header{
+    grid-area: header;
+    background-color: aqua;
+}
+
+.encabezado{
+    background-image: url("public/img/happy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    text-transform: capitalize;
+    min-height: 400px;
+    width: 100%;
+    position: relative;
+    font-weight: 300;
+}
+
+/*para el filtro degradado del encabezado*/
+.encabezado:before{
+    background: -webkit-linear-gradient(0deg, #3224b0 0%, #be5ede 100%);
+    opacity: 0.9;    
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    content: "";
+    z-index: 0;
+}
+
+/*posicionar el header hasta arriba del div*/
+.encabezado header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1em;
+    width: 95%;
+}
+
+.logo{
+    margin-left: 1.7em;
+}
+
+/*diseno de nav y barra de arriba*/
+.barra nav ul{
+    display: inline;
+    padding: 20px;
+    margin-left: 5%;
+}
+
+.barra nav ul li{
+    display: inline;
+}
+
+.barra nav ul li a{
+    text-decoration: none;
+    color:#ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 20px;
+}
+
+.barra{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navegador ul li a:hover{
+    color: #000000;
+    cursor: pointer;
+}
+
+.navegador{
+    flex-wrap: wrap;
+}
+
+/*lo que tiene que ver con el texto del encabezado*/
+.titulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    line-height: 4.7em;
+    position: relative;
+}
+
+.titulo h4{
+    font-weight: 300;
+    color: #ffffff;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+.titulo h1{
+    font-weight: 100;
+    font-size: 8em;
+    color: #ffffff;
+}
+
+/*primera seccion de articulo*/
+.seccion1{
+    grid-area: seccion1;
+    background-color: #ffffff;
+    padding: 6.25em 1.5em 6.25em 1.5em;
+}
+
+.contenido1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    grid-template-areas:
+    "texto1 imagen1";
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;  
+    grid-gap: 1.2em;
+}
+
+.texto1{
+    grid-area: texto1;
+    padding-left: 1.5em;
+}
+
+.imagen1{
+    grid-area: imagen1;
+}
+
+.mountain{
+    width: 90%;
+    margin-left: 5%;
+}
+
+/*diseno de texto de seccion1*/
+.contenido1 .texto1 h2{
+    font-size: 2.4em;
+    text-transform: capitalize;
+    line-height: 1em;
+    font-weight: 100;
+    padding-bottom: 0.8em;
+    color: #000000;
+}
+
+.texto1 span{
+    font-weight: 900;
+}
+
+.contenido1 .texto1 p{
+    font-weight: 300;
+    font-size: 0.84em;
+    margin-bottom: 0.8em;
+    line-height: 1.5em;
+}
+
+.contenido1 .texto1 .boton_secundario{
+    margin-top: 1.4em;
+    margin-bottom: 1.4em;
+}
+
+/*diseno  seccion2*/
+.seccion2{
+    grid-area: seccion2;
+    padding-top: 6.25em;
+    padding-bottom: 6.25em;
+    background-image: url("public/img/cameragirl.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-weight: 300;
+}
+
+.contenido2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    grid-template-areas:
+    "vacio texto2";
+    margin: 0 auto;
+    grid-gap: 1.2em;    
+}
+
+.vacio{
+    grid-area: vacio;
+}
+
+.texto2{
+    grid-area: texto2;
+    padding-left: 8rem;
+    padding-right: 3em;
+}
+
+/*diseno del texto de la seccion 2*/
+.contenido2 .texto2{
+    color: #ffffff;
+}
+
+.contenido2 .texto2 h2{
+    font-size: 2.4em;
+    text-transform: capitalize;
+    line-height: 1em;
+    font-weight: 100;
+    padding-bottom: 0.8em;
+}
+
+.texto2 h2 span{
+    font-weight: bold;
+}
+
+.texto2 p{
+    font-weight: 300;
+    font-size: 0.84em;
+    margin-bottom: 0.8em;
+}
+
+.texto2 .boton_principal{
+    margin-top: 1.4em;
+}
+
+
+/*diseno seccion3 collage fotos*/
+.seccion3{
+    grid-area: seccion3;
+    background-color: #ffffff;
+    padding: 6.25em 2.5em;
+}
+
+.pics{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    grid-template-areas:
+    "imagen1 imagen2"
+    "imagen3 imagen4";
+    grid-gap: 1.7em; 
+}
+
+.grid1{
+    grid-area: imagen1;
+    width: 100%;
+    background-image: url("public/img/col1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.grid2{
+    grid-area: imagen2;
+    width: 100%;
+    background-image: url("public/img/col2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.grid3{
+    grid-area: imagen3;
+    width: 100%;
+    background-image: url("public/img/col3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.grid4{
+    grid-area: imagen4;
+    width: 100%;
+    background-image: url("public/img/col4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/*hover oculto*/
+.text-hide{
+    height: 50vh;
+    background: -webkit-linear-gradient(0deg, #3224b0 0%, #be5ede 100%);
+    opacity: 0.7;
+    visibility: hidden; 
+    color: #ffffff;  
+}
+
+.text-hide:hover{
+    visibility: visible;
+    cursor: pointer;
+}
+
+.grid1:hover .text-hide{
+    visibility: visible;
+}
+
+.grid2:hover .text-hide{
+    visibility: visible;
+}
+
+.grid3:hover .text-hide{
+    visibility: visible;
+}
+
+.grid4:hover .text-hide{
+    visibility: visible;
+}
+
+.invisible-text{
+    padding: 1em;
+}
+
+.invisible-text h3{
+    font-weight: bold;
+}
+
+/*diseno de la seccion del formulario*/
+.formulario{
+    grid-area: seccion3;
+
+}
+
+.formu{
+    background-image: url("public/img/lake.jpg");
+    display: flex;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    font-weight: 300;
+    padding-bottom: 6.25em;
+    padding-top: 6.25em;
+    color: #ffffff;
+}
+
+.formu:before{
+    background: -webkit-linear-gradient(0deg, #3224b0 0%, #be5ede 100%);
+    opacity: 0.9;    
+    position: absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    content: "";
+    z-index: 0;
+}
+
+.cajas{
+    display: flex;
+    flex-direction: column;
+    width:80%;
+    position: relative;
+}
+
+.texto3{
+    position: relative;
+    padding-bottom: 1.7rem;
+    line-height: 2.3em;
+}
+
+.input_nombre, .input_correo, .input_message{
+    border: 1px solid #8373ca;
+    background: transparent;
+    padding: 1em 1.5em 1em;
+    color: #ffffff;
+}
+
+.inputs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 1.4em;
+}
+
+.input_correo, .input_nombre{
+    flex: 1;
+    width: 45%;
+}
+
+.input_correo{
+    margin-left:20px;
+}
+
+.input_nombre{
+    margin-right:20px;
+}
+
+.input_message{
+    height: 150px;
+    resize: none;
+}
+
+.texto3 h2{
+    font-weight: 100;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 2.5em;
+}
+
+.texto3 h2 span{
+    font-weight: bold;
+}
+
+.cajas{
+    position: relative;
+    padding-bottom: 1.4em;
+}
+
+::placeholder {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
+.boton_pos{
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+}
+
+/*diseno de la seccion de subscribe*/
+.subscribe{
+    grid-area: subscribe;
+    padding-bottom: 6.25em;
+    padding-top: 6.25em;
+    background-color:#f9f9ff;
+}
+
+.nospam{
+    width: 100%;  
+    text-align: center;
+    position: relative;
+    font-weight: 300;
+}
+
+.subscribe .nospam h2{
+    font-weight: 100;
+    text-align: center;
+    font-size: 2.5em;
+    color: #000000;
+    margin-bottom: 1em;
+}
+
+.subscribe .nospam h2 span{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.subscribe .nospam p{
+    font-weight: 300;
+    text-align: center;
+    font-size: 0.9em;
+    color: #000000;
+}
+
+.email{
+    background-color: #ffffff;
+    border-radius: 22px;
+    width: 30rem;
+    height: 3.1rem;
+    border: none;
+    margin-bottom: 2em;
+}
+
+.email::placeholder{
+    color: #777777;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.1em;
+    padding-left: 1.4em;
+}
+
+.nospam .boton_secundario{
+    letter-spacing: 0;
+    padding-top:1em;
+    padding-bottom:1em;
+}
+
+/*para que las cajas queden a la par*/
+.ingresar{
+    display: grid;
+    grid-template-columns: 75% 1fr;
+    width: 70%;
+    grid-template-areas: 
+    "email boton";
+    margin: 0 auto;
+}
+
+.email{
+    grid-area: email;
+    width: 100%;
+}
+
+.botoncito{
+    grid-area: boton;
+    justify-self: flex-start;
+}
+
+/*diseno del footer*/
+.footer{
+    grid-area: footer;
+    background-color: #222222;   
+}
+
+.final{
+    background-position: center;
+    width: 100%;  
+    color: #ffffff; 
+    padding-bottom: 6.25em;
+    padding-top: 6.25em;  
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 1.2em;
+}
+
+.icons a{
+    padding: 0.5em;
+}
+
+.hearty{
+    color: #be5ede;
+    cursor: pointer;
+}
+
+a:hover{
+    color: #be5ede;
+    cursor: pointer;
+}
+
+aside{
+    padding-bottom: 2rem;
+}
+
+/*seccion inventada 9*/
+.seccion9{
+    background-color: pink;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+    overflow: hidden;
+    grid-template-areas:
+    "pic1 pic2 pic3 pic4"
+    "pic5 pic6 pic7 pic8";
+}
+
+.pic1{
+    grid-area: pic1;
+    width:30px;
+}
+
+.pic2{
+    grid-area: pic2;
+    width:30px;
+}
+
+.pic3{
+    grid-area: pic3;
+    width:30px;
+}
+
+.pic4{
+    grid-area: pic4;
+    width:30px;
+}
+
+.pic5{
+    grid-area: pic5;
+    width:30px;
+}
+
+.pic6{
+    width:30px;
+    grid-area: pic6;
+    width:30px;
+}
+
+.pic7{
+    grid-area: pic7;
+    width:30px;
+}
+
+.pic8{
+    grid-area: pic8;
+    width:30px;
+}
+
+/*imagen paralax*/
+.paralax-background {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*El diseno de los botones*/
+.boton_tercero{
+    position: relative;
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px #ffffff solid;
+    border-radius: 22px;
+    padding: 0.7rem 2.7rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    justify-items: end;
+}
+
+.boton_tercero:hover{
+    color: #ffffff;
+    background: -webkit-linear-gradient(0deg, #3224b0 0%, #be5ede 100%);
+    border-radius: 22px;
+    border: 1px transparent solid;
+    cursor: pointer;
+}
+
+.boton_secundario{
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    border-radius: 22px;
+    padding: 0.7rem 2.7rem;
+    text-align:center;
+    background: -webkit-linear-gradient(0deg, #3224b0 0%, #be5ede 100%);
+    border: 1px transparent solid;
+    cursor: pointer;
+}
+
+.boton_principal{
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px #ffffff solid;
+    border-radius: 22px;
+    padding: 0.7rem 2.7rem;
+    text-align:center;
+    position: relative;
+    display: inline-flex;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+}
+
+.boton_principal:hover{
+    color: #ffffff;
+    background: -webkit-linear-gradient(0deg, #3224b0 0%, #be5ede 100%);
+    border-radius: 22px;
+    border: 1px transparent solid;
+    cursor: pointer;
+}
+
+.titulo .boton_principal{
+    margin-top: 2.3em;
+}
+
+.align_center{
+    align-items: center;
+}
+
+/*para que las cosas sean responsive*/
+@media screen and (max-width: 785px){
+    .grid-container{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 760px){
+    .contenido1{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        grid-template-areas:
+        "texto1"
+        "imagen1";
+    }
+}
+
+@media screen and (max-width: 760px){
+    .contenido2{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        grid-template-areas:
+        "texto2";
+        margin: 0 auto;
+        grid-gap: 1.2em;    
+    }
+}
+
+@media screen and (max-width: 760px){
+    .ingresar{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 70%;
+        grid-template-areas: 
+        "email"
+        "boton";
+    }
+}
+
+@media screen and (max-width: 760px){
+    .texto2{
+        grid-area: texto2;
+        padding-left: 2rem;
+        padding-right: 1em;
+    }
+}
+
+@media screen and (max-width: 765px){
+    .pics{
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        grid-template-areas:
+        "imagen1"
+        "imagen2"
+        "imagen3"
+        "imagen4";
+        grid-gap: 1.7em; 
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .titulo h1 {
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .titulo h1  {
+        font-size: 2rem;
+    } 
+}
+
